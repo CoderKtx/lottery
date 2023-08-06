@@ -1,0 +1,217 @@
+<resources>
+    <string name="app_name">RaffleClub</string>
+
+    <!-- Customerly App Id -->
+    <string name="customerly_app_id">7d29bd4f</string>
+
+    <!-- RazorPay Api Key -->
+<!--    <string name="razorpay_api_key" translatable="false">rzp_live_igGVM34mYESFFn</string>-->
+    <string name="razorpay_api_key" translatable="false">rzp_live_Xu7jo4NFAPoenm</string>
+
+    <!-- ********************* Bank  ************************* -->
+
+    <string-array name="banks">
+        <item>Select your Bank</item>
+        <item>Bank of Baroda</item>
+        <item>Bank of India</item>
+        <item>Bank of Maharashtra</item>
+        <item>Canara Bank</item>
+        <item>Central Bank of India</item>
+        <item>Indian Bank</item>
+        <item>Indian Overseas Bank</item>
+        <item>Punjab and Sind Bank</item>
+        <item>Punjab National Bank</item>
+        <item>State Bank of India</item>
+        <item>UCO Bank</item>
+        <item>Union Bank of India</item>
+        <item>Axis Bank Ltd.</item>
+        <item>Bandhan Bank Ltd.</item>
+        <item>CSB Bank Ltd.</item>
+        <item>City Union Bank Ltd.</item>
+        <item>DCB Bank Ltd.</item>
+        <item>Dhanlaxmi Bank Ltd.</item>
+        <item>Federal Bank Ltd.</item>
+        <item>HDFC Bank Ltd</item>
+        <item>ICICI Bank Ltd.</item>
+        <item>Induslnd Bank Ltd</item>
+        <item>IDFC First Bank Ltd.</item>
+        <item>Jammu and Kashmir Bank Ltd.</item>
+        <item>Karnataka Bank Ltd.</item>
+        <item>Karur Vysya Bank Ltd.</item>
+        <item>Kotak Mahindra Bank Ltd</item>
+        <item>Nainital Bank Ltd.</item>
+        <item>RBL Bank Ltd.</item>
+        <item>South Indian Bank Ltd.</item>
+        <item>Tamilnad Mercantile Bank Ltd.</item>
+        <item>YES Bank Ltd.</item>
+        <item>IDBI Bank Ltd.</item>
+        <item>Au Small Finance Bank Limited</item>
+        <item>Capital Small Finance Bank Limited</item>
+        <item>Equitas Small Finance Bank Limited</item>
+        <item>Suryoday Small Finance Bank Limited</item>
+        <item>Ujjivan Small Finance Bank Limited</item>
+        <item>Utkarsh Small Finance Bank Limited</item>
+        <item>ESAF Small Finance Bank Limited</item>
+        <item>Fincare Small Finance Bank Limited</item>
+        <item>Jana Small Finance Bank Limited</item>
+        <item>North East Small Finance Bank Limited</item>
+        <item>Shivalik Small Finance Bank Limited</item>
+        <item>Unity Small Finance Bank Limited</item>
+        <item>India Post Payments Bank Limited</item>
+        <item>Fino Payments Bank Limited</item>
+        <item>Paytm Payments Bank Limited</item>
+        <item>Airtel Payments Bank Limited</item>
+        <item>Andhra Pragathi Grameena Bank</item>
+        <item>Andhra Pradesh Grameena Vikas Bank</item>
+        <item>Arunachal Pradesh Rural Bank</item>
+        <item>Aryavart Bank</item>
+        <item>Assam Gramin Vikash Bank</item>
+        <item>Bangiya Gramin Vikas Bank</item>
+        <item>Baroda Gujarat Gramin Bank</item>
+        <item>Baroda Rajasthan Kshetriya Gramin Bank</item>
+        <item>Baroda UP Bank</item>
+        <item>Chaitanya Godavari Grameena Bank</item>
+        <item>Chhattisgarh Rajya Gramin Bank</item>
+        <item>Dakshin Bihar Gramin Bank</item>
+        <item>Ellaquai Dehati Bank</item>
+        <item>Himachal Pradesh Gramin Bank</item>
+        <item>J&amp;K Grameen Bank</item>
+        <item>Jharkhand Rajya Gramin Bank</item>
+        <item>Karnataka Gramin Bank</item>
+        <item>Karnataka Vikas Grameena Bank</item>
+        <item>Kerala Gramin Bank</item>
+        <item>Madhya Pradesh Gramin Bank</item>
+        <item>Madhyanchal Gramin Bank</item>
+        <item>Maharashtra Gramin Bank</item>
+        <item>Manipur Rural Bank</item>
+        <item>Meghalaya Rural Bank</item>
+        <item>Mizoram Rural Bank</item>
+        <item>Nagaland Rural Bank</item>
+        <item>Odisha Gramya Bank</item>
+        <item>Paschim Banga Gramin Bank</item>
+        <item>Prathama UP Gramin Bank</item>
+        <item>Puduvai Bharathiar Grama Bank</item>
+        <item>Punjab Gramin Bank</item>
+        <item>Rajasthan Marudhara Gramin Bank</item>
+        <item>Saptagiri Grameena Bank</item>
+        <item>Sarva Haryana Gramin Bank</item>
+        <item>Saurashtra Gramin Bank</item>
+        <item>Tamil Nadu Grama Bank</item>
+        <item>Telangana Grameena Bank</item>
+        <item>Tripura Gramin Bank</item>
+        <item>Utkal Grameen bank</item>
+        <item>Uttar Bihar Gramin Bank</item>
+        <item>Uttarakhand Gramin Bank</item>
+        <item>Uttarbanga Kshetriya Gramin Bank</item>
+        <item>Vidharbha Konkan Gramin Bank</item>
+        <item>AB Bank Ltd.</item>
+        <item>Abu Dhabi Commercial Bank Ltd.</item>
+        <item>American Express Banking Corporation</item>
+        <item>Australia and New Zealand Banking Group Ltd.</item>
+        <item>Barclays Bank Plc.</item>
+        <item>Bank of America</item>
+        <item>Bank of Bahrain &amp; Kuwait BSC</item>
+        <item>Bank of Ceylon</item>
+        <item>Bank of China</item>
+        <item>Bank of Nova Scotia</item>
+        <item>BNP Paribas</item>
+        <item>Citibank N.A.</item>
+        <item>Cooperatieve Rabobank U.A.</item>
+        <item>Credit Agricole Corporate &amp; Investment Bank</item>
+        <item>Credit Suisse A.G</item>
+        <item>CTBC Bank Co., Ltd.</item>
+        <item>DBS Bank India Limited</item>
+        <item>Deutsche Bank</item>
+        <item>Doha Bank Q.P.S.C</item>
+        <item>Emirates Bank NBD</item>
+        <item>First Abu Dhabi Bank PJSC</item>
+        <item>FirstRand Bank Ltd</item>
+        <item>HSBC Ltd</item>
+        <item>Industrial &amp; Commercial Bank of China Ltd.</item>
+        <item>Industrial Bank of Korea</item>
+        <item>J.P. Morgan Chase Bank N.A.</item>
+        <item>JSC VTB Bank</item>
+        <item>KEB Hana Bank</item>
+        <item>Kookmin Bank</item>
+        <item>Krung Thai Bank Public Co. Ltd.</item>
+        <item>Mashreq Bank PSC</item>
+        <item>Mizuho&amp; Bank Ltd.</item>
+        <item>MUFG Bank, Ltd.</item>
+        <item>NatWest Markets Plc</item>
+        <item>PT Bank Maybank Indonesia TBK</item>
+        <item>Qatar National Bank (Q.P.S.C.)</item>
+        <item>Sberbank</item>
+        <item>SBM Bank (India) Limited</item>
+        <item>Shinhan Bank</item>
+        <item>Societe Generale</item>
+        <item>Sonali Bank Ltd.</item>
+        <item>Standard Chartered Bank</item>
+        <item>Sumitomo Mitsui Banking Corporation</item>
+        <item>United Overseas Bank Ltd</item>
+        <item>Woori Bank</item>
+
+
+
+
+
+    </string-array>
+
+
+    <!-- ********************* No Need change below value  ************************* -->
+
+    <string name="filter_view_http_gizmos">filter http gizmos</string>
+    <string name="filter_view_example_gizmos">filter example gizmos</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_wallet">Wallet</string>
+    <string name="menu_my_ticket">My Tickets</string>
+    <string name="menu_history">History</string>
+    <string name="menu_refer_earn">Refer &amp; Earn</string>
+    <string name="menu_report_an_issue">Report an issue</string>
+    <string name="menu_policy">Privacy Policy</string>
+    <string name="menu_faq">FAQs</string>
+    <string name="menu_refund_policy">Refund policy</string>
+    <string name="menu_terms">Terms &amp; Conditions</string>
+    <string name="menu_contact">Contact Us</string>
+    <string name="menu_about">About Us</string>
+    <string name="logout">Logout</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="terms_and_conditions_link"><u>Terms And Conditions</u></string>
+
+    <string name="shopping">&#160;Shopping</string>
+    <string name="flutterwave">Flutterwave</string>
+    <string name="order_placed">Balance Added!!!</string>
+    <string name="order_error">Error while payment!!!</string>
+    <string name="order_cancel">Cancel payment!!!</string>
+    <string name="first_price">First Prize</string>
+    <string name="total_winner">Total number of Winners</string>
+    <string name="guide">Guide</string>
+    <string name="guaranteed_place">Guaranteed to take place regardless of spots filled</string>
+    <string name="number_tickets">Number of tickets bought in this contest</string>
+    <string name="silver_ticket">Silver
+tickets</string>
+    <string name="gold_tickets">Gold
+tickets</string>
+    <string name="bronze_tickets">Bronze
+tickets</string>
+    <string name="bronze">Bronze</string>
+    <string name="tickets">tickets</string>
+    <string name="silver">Silver</string>
+    <string name="gold">Gold</string>
+    <string name="platinum">Platinum</string>
+    <string name="link_bank_account">Link Bank Account</string>
+    <string name="underreview_text">Bank details under review</string>
+    <string name="your_bank_information_has_been_verified">Your bank information has been verified</string>
+</resources>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Link your Bank Account"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="25dp"
+
+                android:background="@drawable/background_spinner_bank"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_account_balance_black_24dp"
+                    app:tint="@color/black" />
+
+                <Spinner
+                    android:id="@+id/spinnerBank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/banks"
+                    />
+
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/acc_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/icons8_user_24dp"
+                android:drawablePadding="10dp"
+                android:hint="Account Holder Name"
+
+                android:padding="13dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/acc_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_account_balance_black_24dp"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/black"
+                android:hint="Account Number"
+                android:inputType="numberPassword"
+                android:padding="18dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/eAccNumberRenter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_account_balance_black_24dp"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/black"
+                android:hint="Re-enter Account Number"
+                android:inputType="number"
+                android:padding="18dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tErrorBankAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Account Number not matching"
+                android:textColor="@color/color_error"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/ifsc_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_view_day_black_24dp"
+
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/black"
+                android:hint="IFSC Code"
+                android:inputType="textCapWords"
+                android:maxLength="11"
+                android:padding="18dp"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tErrorIFSC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Incorrect IFSC Code"
+                android:textColor="@color/color_error"
+                android:visibility="gone" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/proofCopyCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:padding="@dimen/max10"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/button_background"
+                        android:text="Attach a photocopy of any proof(passbook,cancelled cheque, account statement) for the above account"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/proof_copy"
+                        android:visibility="gone"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/addImage"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/max10"
+                        android:background="@drawable/icons8_camera_96"
+                        android:backgroundTint="@color/colorPrimary" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/proof_copy_Final"
+                android:visibility="gone"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop" />
+
+            <EditText
+                android:id="@+id/pan_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/ic_picture_in_picture_black_24dp"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/black"
+                android:hint="PAN Number"
+                android:inputType="text"
+                android:maxLength="10"
+                android:padding="18dp"
+                android:textColor="@color/black"
+                android:textColorHint="#606060"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tErrorPan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Incorrect PAN Code"
+                android:textColor="@color/color_error"
+                android:visibility="gone" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewPDA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="4dp"
+                app:cardElevation="3dp"
+
+                android:padding="@dimen/max10"
+                app:cardCornerRadius="16dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/button_background"
+                        android:text="Upload your PAN card"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgPAN"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/addImagePAN"
+
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/max10"
+                        android:background="@drawable/icons8_camera_96"
+                        android:backgroundTint="@color/colorPrimary" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageView
+                android:id="@+id/pan_card_Final"
+                android:visibility="gone"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textinput_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/color_error"
+          />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            app:cardCornerRadius="30dp">
+
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button_background_accent"
+                android:padding="@dimen/max10"
+                android:text="Submit for Verification"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

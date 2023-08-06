@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+           <ImageView
+               android:layout_width="185dp"
+               android:layout_height="115dp"
+               android:background="@drawable/logo"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:background="@drawable/button_background"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/icons8_user_24dp"
+                android:hint="Full Name"
+                android:padding="13dp"
+                android:drawableTint="@color/black"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:background="@drawable/button_background">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/cntrno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    app:ccp_arrowColor="#fff"
+                    app:ccp_showArrow="false"
+
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:paddingStart="7dp"
+                    android:textSize="14sp"
+                    app:ccp_clickable="false"
+                    app:ccp_autoDetectCountry="false"
+                    app:ccp_contentColor="#242627"
+                    app:ccp_defaultPhoneCode="91"
+                    app:ccp_showNameCode="false"
+                    app:ccp_showPhoneCode="true"
+                    app:ccp_textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/mobileno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/cntrno"
+                    android:background="@android:color/transparent"
+                    android:hint="Mobile number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:minHeight="48dp"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/errorMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textColor="#f00"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundMode="outline"
+                app:endIconMode="password_toggle"
+                android:layout_marginTop="@dimen/margin_top"
+                app:hintEnabled="false"
+                app:errorTextColor="#f00"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:drawableStart="@drawable/icons8_lock_24_fil"
+                android:drawablePadding="10dp"
+
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="13dp"
+                android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layoutError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/errorMin"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/icErrorMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:tint="@color/red_color"
+
+                        android:src="@drawable/close"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/textViewOpen"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Minimum 6-digits"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ErrorUpperCase"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/icCheckUpperCase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:tint="@color/red_color"
+
+                        android:src="@drawable/close"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/textViewOpen"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Atleast 1 upper case letter (A-Z) "/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ErrorLowerCase"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/icCheckLowerCase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:tint="@color/red_color"
+                        android:src="@drawable/close"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/textViewOpen"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Atleast 1 lower case letter (a-z) "/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ErrorNumber"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/icCheckNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:tint="@color/red_color"
+                        android:src="@drawable/close"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/textViewOpen"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Atleast 1 number(0-9)"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ErrorSymbol"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/icCheckSymbol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:tint="@color/red_color"
+                        android:src="@drawable/close"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/textViewOpen"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Atleast 1 non-alphanumeric symbol (@#$%!)"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                app:boxBackgroundMode="outline"
+                app:hintEnabled="false"
+                app:errorTextColor="#f00"
+                >
+            <EditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/button_background"
+                android:drawableStart="@drawable/icons8_lock_24"
+                android:drawablePadding="10dp"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="13dp"
+                android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/dateofbirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:drawableStart="@drawable/ic_date_range_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="Date Of Birth"
+                android:background="@drawable/button_background"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:padding="18dp"
+                android:textColorHint="#606060"
+                android:textSize="14sp" />
+
+
+            <EditText
+                android:id="@+id/refer"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="@dimen/margin_top"
+                android:background="@drawable/button_background"
+                android:drawablePadding="13dp"
+                android:drawableTint="@color/black"
+                android:drawableStart="@drawable/icons8_user_account_24dp"
+                android:hint="Referral code (Optional)"
+                android:imeOptions="actionDone"
+                android:padding="13dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textinput_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signup"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rippleColor="@color/colorPrimary"
+                android:backgroundTint="@color/white"
+
+                android:minWidth="140dp"
+                android:layout_gravity="center"
+                android:text="SignUp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="By clicking SignUp you accept our"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/privacyPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/terms_and_conditions_link"
+                android:textSize="16sp"
+                android:textColor="@color/yellow"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
